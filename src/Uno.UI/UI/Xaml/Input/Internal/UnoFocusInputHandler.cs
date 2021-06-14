@@ -46,7 +46,7 @@ namespace Uno.UI.Xaml.Input
 
 			if (e.OriginalKey == VirtualKey.Tab)
 			{
-				e.Handled = TryHandleTabFocus(_isShiftDown);
+					e.Handled = TryHandleTabFocus(_isShiftDown);
 			}
 
 			if (e.OriginalKey == VirtualKey.Up ||

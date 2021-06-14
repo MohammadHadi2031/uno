@@ -175,6 +175,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <UpToDateCheckInput Remove="Microsoft\UI\Xaml\Controls\AppBar\AppBarClosedDisplayMode.cs" />
+	  <UpToDateCheckInput Remove="Microsoft\UI\Xaml\Controls\AppBar\LightDismissOverlayMode.cs" />
+	  <UpToDateCheckInput Remove="Microsoft\UI\Xaml\Controls\CommandBar\ICommandBarElement.cs" />
+	  <UpToDateCheckInput Remove="Microsoft\UI\Xaml\Controls\CommandBar\ICommandBarElement2.cs" />
+	  <UpToDateCheckInput Remove="Microsoft\UI\Xaml\Controls\CommandBar\ICommandBarElement3.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Compile Include="Mixins\Android\BaseActivity.Callbacks.g.cs" />
 		<Compile Include="Mixins\Android\FrameworkElementMixins.g.cs" />
 		<Compile Include="Mixins\Android\FrameworkElementMixins.g.cs" />

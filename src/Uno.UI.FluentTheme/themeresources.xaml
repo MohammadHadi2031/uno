@@ -12818,7 +12818,7 @@
   </Style>
   <Thickness x:Key="CommandBarOverflowPresenterMargin">0,4,0,4</Thickness>
   <Style x:Key="DefaultCommandBarStyle" TargetType="CommandBar">
-    <Setter Property="Background" Value="{ThemeResource CommandBarBackground}" />
+	<Setter Property="Background" Value="{ThemeResource CommandBarBackground}" />
     <Setter Property="Foreground" Value="{ThemeResource CommandBarForeground}" />
     <Setter Property="IsTabStop" Value="False" />
     <Setter Property="VerticalAlignment" Value="Top" />
@@ -12892,7 +12892,7 @@
                   <VisualTransition From="CompactOpenUp" To="CompactClosed" GeneratedDuration="0:0:0.167">
                     <Storyboard>
                       <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MoreButton" Storyboard.TargetProperty="VerticalAlignment">
-                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Stretch" />
+                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Center" />
                       </ObjectAnimationUsingKeyFrames>
                       <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HighContrastBorder" Storyboard.TargetProperty="Visibility">
                         <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible" />
@@ -13540,8 +13540,10 @@
                   <ColumnDefinition x:Name="ContentControlColumnDefinition" Width="*" />
                   <ColumnDefinition x:Name="PrimaryItemsControlColumnDefinition" Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <!-- Use a ContentControl rather than a ContentPresenter so that IsEnabled can be set to false
-                                     in the Minimal/HiddenClosed states to remove it from being a tab-stop candidate. -->
+                <!--
+									Use a ContentControl rather than a ContentPresenter so that IsEnabled can be set to false
+									in the Minimal/HiddenClosed states to remove it from being a tab-stop candidate.
+								-->
                 <ContentControl x:Name="ContentControl" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" IsTabStop="False" />
                 <ItemsControl x:Name="PrimaryItemsControl" HorizontalAlignment="Right" MinHeight="{ThemeResource AppBarThemeCompactHeight}" IsTabStop="False" Grid.Column="1">
                   <ItemsControl.ItemsPanel>
@@ -13578,7 +13580,7 @@
                   </CommandBarOverflowPresenter>
                 </Grid>
               </Popup>
-              <Rectangle x:Name="HighContrastBorder" x:DeferLoadStrategy="Lazy" Grid.ColumnSpan="2" Visibility="Collapsed" VerticalAlignment="Stretch" Stroke="{ThemeResource CommandBarHighContrastBorder}" StrokeThickness="1" />
+              <Rectangle x:Name="HighContrastBorder" x:DeferLoadStrategy="Lazy" Grid.ColumnSpan="2" Visibility="Collapsed" VerticalAlignment="Stretch" IsHitTestVisible="False" Stroke="{ThemeResource CommandBarHighContrastBorder}" StrokeThickness="1" />
             </Grid>
           </Grid>
         </ControlTemplate>
@@ -14297,8 +14299,10 @@
                   <ColumnDefinition x:Name="ContentControlColumnDefinition" Width="*" />
                   <ColumnDefinition x:Name="PrimaryItemsControlColumnDefinition" Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <!-- Use a ContentControl rather than a ContentPresenter so that IsEnabled can be set to false
-                                     in the Minimal/HiddenClosed states to remove it from being a tab-stop candidate. -->
+                <!--
+									Use a ContentControl rather than a ContentPresenter so that IsEnabled can be set to false
+									in the Minimal/HiddenClosed states to remove it from being a tab-stop candidate.
+								-->
                 <ContentControl x:Name="ContentControl" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" IsTabStop="False" />
                 <ItemsControl x:Name="PrimaryItemsControl" HorizontalAlignment="Right" MinHeight="{ThemeResource AppBarThemeCompactHeight}" IsTabStop="False" Grid.Column="1">
                   <ItemsControl.ItemsPanel>
@@ -14309,7 +14313,7 @@
                 </ItemsControl>
               </Grid>
               <Button x:Name="MoreButton" Foreground="{TemplateBinding Foreground}" Style="{StaticResource EllipsisButton}" Padding="{ThemeResource CommandBarMoreButtonMargin}" MinHeight="{ThemeResource AppBarThemeCompactHeight}" VerticalAlignment="Top" Grid.Column="1" Control.IsTemplateKeyTipTarget="True" IsAccessKeyScope="True" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=CommandBarTemplateSettings.EffectiveOverflowButtonVisibility}">
-                <FontIcon x:Name="EllipsisIcon" VerticalAlignment="Center" FontFamily="{ThemeResource SymbolThemeFontFamily}" FontSize="20" Glyph="&#xE10C;" Height="{ThemeResource AppBarExpandButtonCircleDiameter}" />
+                <FontIcon x:Name="EllipsisIcon" FontFamily="{ThemeResource SymbolThemeFontFamily}" FontSize="20" Glyph="&#xE10C;" Height="{ThemeResource AppBarExpandButtonCircleDiameter}" />
               </Button>
               <Popup x:Name="OverflowPopup">
                 <Popup.RenderTransform>
@@ -14335,7 +14339,7 @@
                   </CommandBarOverflowPresenter>
                 </Grid>
               </Popup>
-              <Rectangle x:Name="HighContrastBorder" x:DeferLoadStrategy="Lazy" Grid.ColumnSpan="2" Visibility="Collapsed" VerticalAlignment="Stretch" Stroke="{ThemeResource CommandBarHighContrastBorder}" StrokeThickness="1" />
+              <Rectangle x:Name="HighContrastBorder" x:DeferLoadStrategy="Lazy" Grid.ColumnSpan="2" Visibility="Collapsed" VerticalAlignment="Stretch" IsHitTestVisible="False" Stroke="{ThemeResource CommandBarHighContrastBorder}" StrokeThickness="1" />
             </Grid>
           </Grid>
         </ControlTemplate>
